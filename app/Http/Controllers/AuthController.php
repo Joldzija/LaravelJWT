@@ -32,7 +32,7 @@ class AuthController extends Controller
             return response()->json(['error' => 'Unauthorized'], 401);
         }
 
-        return $this->respondWithToken($token);
+        return view('home');
     }
     public function register(Request $request)
     {

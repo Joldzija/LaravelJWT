@@ -13,7 +13,7 @@ Route::group([
     Route::post('me', 'AuthController@me');
 
 });
-
+Route::get('/posts','PostController@index');
 Route::get('/home', function () {
     return view('home');
 })->middleware('jwt');

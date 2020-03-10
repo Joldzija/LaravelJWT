@@ -20,4 +20,12 @@
         </div>
     </div>
 </div>
-@endsection
+<script>
+    fetch('http://localhost:8000/api/posts',{
+        method:'GET',
+        headers:{
+            'Content-Type':'application/json',
+            'Authorization':'Bearer Adjaidjadoijasdojsdjdiajdoj'
+        }
+    }).then(res=>res.json()).then(posts=>console.log(posts));
+</script>
