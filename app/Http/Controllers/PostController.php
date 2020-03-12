@@ -9,7 +9,7 @@ class PostController extends Controller
 {
     public function __construct()
     {
-
+        $this->middleware('jwt');
     }
     public function index(){
         $posts = Post::all();

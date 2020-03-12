@@ -32,7 +32,7 @@ class AuthController extends Controller
             return response()->json(['error' => 'Unauthorized'], 401);
         }
 
-        return view('home');
+        return view('home', ['token'=>$token]);
     }
     public function register(Request $request)
     {
@@ -54,7 +54,7 @@ class AuthController extends Controller
 
         $token = JWTAuth::fromUser($user);
 
-       // return redirect('/login');
+
        return redirect('/login');
     }
     /**
